@@ -8,7 +8,7 @@ class Query{
 	const DELETE = 'DELETE';
 	const UPDATE = 'UPDATE';
 
-	private $db;
+	protected $db;
 
 	private $type = null;
 
@@ -18,7 +18,7 @@ class Query{
 
 	private $updateFields = [];
 
-	private $countFoundRows = false;
+	protected $countFoundRows = false;
 
 	private $table;
 
