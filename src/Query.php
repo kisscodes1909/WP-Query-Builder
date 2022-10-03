@@ -30,9 +30,9 @@ class Query{
 
 	private $order = [];
 
-	private $limit = 0;
+	protected $limit = 0;
 
-	private $offset = 0;
+	protected $offset = 0;
 
 	private $groupBy;
 
