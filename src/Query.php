@@ -30,9 +30,9 @@ class Query{
 
 	private $order = [];
 
-	protected $limit = 0;
+	private $limit = 0;
 
-	protected $offset = 0;
+	private $offset = 0;
 
 	private $groupBy;
 
@@ -164,6 +164,14 @@ class Query{
 	public function fullJoin($table, $firstColumn, $operator = JoinClause::USING, $secondColumn = null){
 		$this->join(JoinClause::FULL, $table, $firstColumn, $operator, $secondColumn);
 		return $this;
+	}
+
+	public function getLimit() {
+		return $this->limit;
+	}
+
+	public function getOffset() {
+		return $this->offset;
 	}
 
 	private function join($type, $table, $firstColumn, $operator, $secondColumn){
